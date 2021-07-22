@@ -1,0 +1,15 @@
+c	reconstituer la bibliotheque cesam_a.a si ce programme est modifie
+ 
+c	COMMON /evol_chim_3/ pour CESAM3
+ 
+c        10        20        30        40        50        60        70
+ 
+	real*8	nucleo(pnelem),ab_min(pnelem),ab_ini(pnelem),t_inf
+	integer	nbelem,nreac,nchim,iw,iz,ihe4,ordre
+	character*3 nom_elem(pnelem)
+	logical	diffusion	
+	common/evol_chim_3/nucleo,ab_min,ab_ini,t_inf,
+     1	nbelem,nreac,nchim,iw,iz,ihe4,ordre,diffusion,nom_elem
+	
+	
+	

@@ -1,0 +1,11 @@
+c	reconstituer la bibliotheque cesam_3.a si ce fichier est modifie
+ 
+	character*7	version
+	data version/'3.2.2.0'/		!Mai 1997
+ 
+c	3.1 	: masses en (m/Msol)**2/3
+c	3.1.1	: limites ZC/ZC precisees a 1.e-6
+c	3.1.1.1	: corrections et amenagements divers
+c	3.2.0.0 : augmentation du nombre d'elements, de reactions + details
+c	3.2.0.1 : amenagements divers
+c	3.2.2.0 : approximation de Kippenhahn pour TdS/dt

@@ -1,0 +1,91 @@
+-----------------------------------------------------------------------
+
+	This directory contains equation of state(EOS) data files and 
+corresponding interpolation codes.  The equation of state tables are an 
+extension and update of the EOS and EOSplus tables.  The temperature-density 
+range of the EOS and EOSplus tables accommodates temperature-density values 
+characteristic of stars having masses greater than about 0.8 solar.  The 
+EOS_2001 tables cover temperature_density values encountered in stars having 
+masses greater than about 0.1 solar. A number of changes have been made to 
+the OPAL EOS code since the 1996 tables were calculated; primarily electrons 
+are now treated relativistically and the activity expansion method has been 
+improved for repulsive interactions. In addition to H2 and  H2_plus molecules, 
+and the H_, negative ion, He2+, HeH+ are now also included.
+
+-----------------------------------------------------------------------
+
+        NOTE: Updates to the fortran codes: IEOSxtrin.f and IEOSxtrin_H_He.f
+were made on 6 Mar 2002. These updates include bug fixes. If you use these
+codes, please download the latest versions.
+
+-----------------------------------------------------------------------
+
+	The format of the tables is different than that used in the opacity 
+directory.  For the EOS, data is tabulated at constant T6 and density(rho), 
+rather than constant T6 and R (T6=temperature in units of 10**6 K, R=rho/T6**3), 
+rho is density in g/cc).  Herein, X is the hydogen mass  fraction, and Z is the 
+mass fraction of all elements heavier than helium.  The helium mass fraction,Y,
+is thus, Y=1-X-Z.
+
+	The EOS data is tabulated at Z=0.0,0.02,and 0.04; X=0.0,0.2,0.4,0.6 and 0.8.  
+A pure hydrogen table (X=1, Z=0) is also available. The number of Z and X 
+values is less than for the opacity tables, due to that fact that the EOS 
+does not vary as greatly with changes in these variables. The temperature is
+tabulated in the range 0.002  to 100.0 and the density in the range
+10**(-14) to 10**7 grams/cc.  (Note: much of the region around rho=10**(-14) 
+is radiation dominated and is included mainly for convenience of tabulation.)  
+The lower temperature limit of the tables gradually increases for densities 
+ > 0.00237 gm/cc.
+
+	The IEOS*z%x.gz files are the EOS data in compressed format for Z=* and 
+X=%;i.e., IEOS02z4x.gz corresponds to Z=0.02 and X=0.4.
+
+	The Z_interp_IEOS.f code interpolates the IEOS*z%x files for a
+fixed value of Z, creating a file 'EOSdata.gz'. The EOSdata.gz file is used
+by IEOS_xtrin.f to interpolate in X, T6, and rho at the fixed value of Z
+used to construct the EOSdata.gz file.  The accuracy of the
+interpolation has been checked by comparison with a large sample of
+test calculations.  Better than four place accuracy is generally achieved
+with both first and second order properties.  At very low density 
+(rho < 1.e-8), in regions of rapid change, the first order properties are 
+occasionally off by as much as  a few % and the second order properties 
+can be off by 10 percent.  Direct differentiation of the interpolated
+first order properties is most likely less accurate and is not recommended.
+[[
+	Since the Z dependent effects are quite modest for population I & II 
+mixtures, the Z=0 EOS is adequate for many purposes.  In this case the Z_interp_IEOS.f
+is not required to create the EOSdata.gz file. Instead the EOSdata_H-He.gz file
+can be used in conjunction with the Z_interp_IEOS_H-He.f interpolation code.  
+The EOS-data_H-He file covers the full range of X and Y;i.e., the 5 IEOS0z%x 
+files plus the IEOS0zxx file (for pure H).  
+
+	In order to calculate derivatives of the EOS, a very fine 
+temperature-density grid was used.  The tabulated data is a condensation 
+of this information.  The computer time required to calculate for the actual stellar 
+mixture would be substantial, so a truncated mixture was used.  In the 
+truncated mixture the mass contribution of all elements above neon where 
+added in with the neon.  Contrary to the situation with opacity, these 
+high Z elements never contribute substantially
+
+	The fractional elemental number components of Z for the reduced mixture are
+(Grevesse, N. 1991, A&A 242,488):
+
+		XC= 0.2471362
+		XN= 0.0620778
+ 		XO= 0.528368 
+		XNe=0.1624178
+
+The corresponding number fractions, including hrdrogen and heliun, are listed at the 
+front of each of the IEOS*z%x files.  More recent estimates of  steller element 
+abundances change these values slightly, but have very small affect on the EOS.
+
+-----------------------------------------------------------------------
+Recent references to this equation of state work:
+Rogers, FJ., CONTRIBUTIONS TO PLASMA PHYSICS, 2001, V41(N2-3):179-182.
+Rogers, FJ., PHYSICS OF PLASMAS, JAN, 2000, V7(N1):51-58.
+Rogers, F.J., Swenson, F.J. and Iglesias, C. A. 1996,ApJ,456,902
+Rogers, F.J. 1994, in "The Equation of State in Astrophysics", IAU
+	Colloquium 147, eds. G. Chabrier and E. Schatzman (Cambridge University
+Press), p16
+
+--------------------------------------------------------------------

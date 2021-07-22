@@ -1,0 +1,16 @@
+c	reconstituer la bibliotheque cesam_3.a si ce programme est modifie
+
+c	COMMON/ctephy/ pour CESAM_3
+
+c        10        20        30        40        50        60        70
+
+	real*8	pi,echarg,kbol,hpl,clight,eve,kih,kihe,kihe1,amu,me,
+     1	g,aradia,msol,lsol,rsol,secon6,ah,ah2,ahe3,ahe4,ali7,
+     2	abe7,ac12,ac13,an13,an14,an15,ao16,ao17,ao18,af19,ane20,
+     3	ane22,amg24,amg25,amg26,an
+      common /ctephy/pi,echarg,kbol,hpl,clight,eve,kih,kihe,kihe1,amu,
+     1  me,
+     1	g,aradia,msol,lsol,rsol,secon6,ah,ah2,ahe3,ahe4,ali7,
+     2	abe7,ac12,ac13,an13,an14,an15,ao16,ao17,ao18,af19,ane20,
+     3	ane22,amg24,amg25,amg26,an
+

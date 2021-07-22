@@ -1,0 +1,37 @@
+c	reconstituer la bibliotheque cesam_3.a si ce programme est modifie
+ 
+c	fichiers des parametres pour CESAM_3, il s'agit de valeurs maximales
+ 
+c	pn : nombre de points
+c	pnch : nombre de couches pour la comp. chim.
+c	pm_qs : ordre des splines pour la collocation modele statique
+c	pnchim : nombre d'elements chimiques + MA + Z
+c	pne: nombre d'equa. diff. modele statique
+c	pn_atm : nombre de couches pour l'atmosphere
+c	pnzc : nombre de zones melangees
+c	pm_ch : ordre des splines d'interpolation de la comp. chim.
+c	pnreac : nombre de reactions thermonucleaires
+c	pne_atm : nombre d'equations de l'atmosphere
+ 
+	integer pn,pm_qs,pnchim,pnelem,pne,pn_atm,pnzc,pm_ch,pnreac,pne_atm,pnch
+ 
+	integer pqt, pbp, pchimt, pchim
+ 
+	parameter (pn=1000, pnch=1200, pm_qs=2, pnchim=21, pnelem=pnchim+2,
+     1	pne=6, pn_atm=50)
+	parameter (pnzc=4, pm_ch=4, pnreac=30, pne_atm=7)
+	
+c	dimensions generales
+c	pqt : dimension du vecteur nodal pour l'integration
+c		des equation de l'equilibre quasi statique (vecteur qt)
+c	pbp : dimension de la base des vecteurs des variables dependantes
+c		lnP, lnT, r**2, l**23, m**23, psi (vecteur bp)
+c	pchimt : dimension du vecteur nodal pour l'interpolation
+c		de la composition chimique (vecteur chimt)
+c	pchim : dimension de la base des vecteurs de composition
+c		chimique generalisee (vecteur chim)
+ 
+c	REMARQUE : pour simplifier, pbp et pchim sont legerement surdimensionnes
+ 
+	parameter (pqt=pn*pm_qs+2, pbp=pne*pqt,
+     1	pchimt=pnch+2*(pnzc+1)*(pm_ch-1), pchim=pchimt*pnelem)

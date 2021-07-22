@@ -1,0 +1,8 @@
+c	reconstituer la bibliotheque cesam.a si ce programme est modifie
+
+c	COMMON /atmosphere_3/ pour CESAM3
+
+	integer	n_atm,n23,nea
+	real*8	tau_min,tau_max
+	common/atmosphere_3/tau_min,tau_max,n_atm,n23,nea
+

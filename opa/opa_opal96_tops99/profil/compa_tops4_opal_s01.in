@@ -1,0 +1,30 @@
+#----------------------------------------------------------------------------
+# Date et auteur, .True. ou .False. , le texte
+T
+\fi26 Mai 1998, Daniel Cordier
+#----------------------------------------------------------------------------
+# Nom du fichier PostScript, ecriture ou non de ce nom sur le dessin
+tops4_01.ps
+T
+#----------------------------------------------------------------------------
+# xmin xmax ymin ymax (format(4E7.1))
+  6.0E0 8.06E0  0.0E0  0.3E0
+#----------------------------------------------------------------------------
+# Graduations ngx , ngy, just, axis
+   4   2   1   1
+#----------------------------------------------------------------------------
+# Facteur de reduction : en abscisse fx, en ordonnee fy (0. < fi < 1.)
+ 0.80E0 1.00E0
+#----------------------------------------------------------------------------
+# Titre, Label_x, Label_y, nbre textes, les textes (coord+text: '2E7.1,A')
+
+Log T
+\gk\dTOPS 4\u
+   1
+ 0.02E0 0.16E0\gk\dTOPS 4\u + \gk\dOPAL 96\u
+#----------------------------------------------------------------------------
+# Fichiers :
+# Nbres, pour chacun : nbre de pts, nom du fichier, style, width, color, lines/points
+   1
+test1.dat
+   1   2   1  L

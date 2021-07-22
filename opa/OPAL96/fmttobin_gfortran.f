@@ -21,7 +21,8 @@ c-------------------------------------------------------------------
   
       if(answer.eq.'y') then
         write(6,*) 'ASCII ---> binaire'
-        write(6,*)'name of the existing ASCII opacity table : '
+        write(6,*)'name of the existing ASCII opacity table: '
+        write(6,*)'(e.g. gn93o_s9)'
         read(5,'(a)') nomasc
         write(6,*) 'name of the new binary table: '
         read(5,'(a)') nombin

@@ -25,23 +25,23 @@ failure.
 <b>Masses:</b> 2.2, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 7.0, 8.0, 10.0 solar masses<br>
 <b>Chemical composition:</b> X=0.754 Y=0.245 <b>Z=0.001</b><br>
 <b>Overshooting:</b> <font color="red">0.2 Hp</font><br>
-<a href="models/ceph_web/Z0.001_O.2Hp.png"><img src="models/ceph_web/Z0.001_O.2Hp_small.png"></a><br>
+<a href="ceph_web/Z0.001_O.2Hp.png"><img src="models/ceph_web/Z0.001_O.2Hp_small.png"></a><br>
 To enlarge, click on the figure.
 </p>
 
 <ul>
-<li><a href="models/ceph_web/M2.2_0.001_0.2.out_web">M2.2_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M2.5_0.001_0.2.out_web">M2.5_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M3.0_0.001_0.2.out_web">M3.0_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M3.5_0.001_0.2.out_web">M3.5_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M4.0_0.001_0.2.out_web">M4.0_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M4.5_0.001_0.2.out_web">M4.5_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M5.0_0.001_0.2.out_web">M5.0_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M5.5_0.001_0.2.out_web">M5.5_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M6.0_0.001_0.2.out_web">M6.0_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M7.0_0.001_0.2.out_web">M7.0_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M8.0_0.001_0.2.out_web">M8.0_0.001_0.2.out_web</a></li>
-<li><a href="models/ceph_web/M10.0_0.001_0.2.out_web">M10.0_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M2.2_0.001_0.2.out_web">M2.2_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M2.5_0.001_0.2.out_web">M2.5_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M3.0_0.001_0.2.out_web">M3.0_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M3.5_0.001_0.2.out_web">M3.5_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M4.0_0.001_0.2.out_web">M4.0_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M4.5_0.001_0.2.out_web">M4.5_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M5.0_0.001_0.2.out_web">M5.0_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M5.5_0.001_0.2.out_web">M5.5_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M6.0_0.001_0.2.out_web">M6.0_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M7.0_0.001_0.2.out_web">M7.0_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M8.0_0.001_0.2.out_web">M8.0_0.001_0.2.out_web</a></li>
+<li><a href="ceph_web/M10.0_0.001_0.2.out_web">M10.0_0.001_0.2.out_web</a></li>
 </ul>
 
 <p>

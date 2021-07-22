@@ -8,6 +8,11 @@ D. Cordier during his PhD thesis.
 
 # Repository description
 
+ - **MODELES_Cordier_etal_2002-2003/**: models corresponding to those computed/employed in 
+   [Cordier *et al*. (2002)](https://ui.adsabs.harvard.edu/abs/2002A%26A...392..169C/abstract) and 
+   [cordier *et al*. (2003)](https://ui.adsabs.harvard.edu/abs/2003A%26A...409..491C/abstract).
+ - **cres4.0_gfortran/**: main sources of the code.
+ 
 # Installation
 
 # How to run a simulation

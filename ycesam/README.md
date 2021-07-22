@@ -45,7 +45,7 @@ each experiment.</p>
   operation.<br>
   You should get the following library: <code><b>lib_YCesam.a</code></b></li>
   <li>Download the main program source:
-  <a href="ycesam/main_ycesam_std.f">main_ycesam_std.f</a> and compile <i>Y</i>C with a command line
+  <a href="main_ycesam_std.f">main_ycesam_std.f</a> and compile <i>Y</i>C with a command line
   similar to:
   <div class=command>g77 -O6 -fno-automatic -fugly-assumed -malign-double -o my_cesam_executable main_ycesam_std.f 
                      lib_YCesam.a -lpgplot -lX11</div></li><br>
@@ -62,7 +62,7 @@ each experiment.</p>
   <div class=command>./my_cesam_executable</div>
   Your should get something like this:<br>
   <p>
-  <img src="ycesam/first_screen_YC.png">
+  <img src="first_screen_YC.png">
   </p>
   </li>
 </ul>
@@ -72,7 +72,7 @@ each experiment.</p>
 <ul style="circle">
   <li>Opacity tables for a solar mixture (GN93):
   <ul>
-      <li>download the following archive: <a href="ycesam/opa_OPAL96_YL.tar.gz">opa_OPAL96_YL.tar.gz</a>.
+      <li>download the following archive: <a href="opa_OPAL96_YL.tar.gz">opa_OPAL96_YL.tar.gz</a>.
       This packages has been originally written by Yveline Lebreton from 
       <a href="http://www.obspm.fr">Paris-Meudon Observatory</a>, I just modified some stuffs for the
       adaptation to <i>Yellow</i> CESAM.</li>
@@ -86,7 +86,7 @@ each experiment.</p>
       <div class=command>./fmttobin</div><br>
       answer in this spirit:
       <p>
-      <img src="ycesam/inout_prog_yveline.png">
+      <img src="inout_prog_yveline.png">
       </p>
       <code>gn93o_s9</code> is the ASCII table. The program gives you
       a binary file (named here "<code>OPAL_96.dat</code>") which will be used by <i>Yellow</i> CESAM for its
@@ -95,7 +95,7 @@ each experiment.</p>
   </li>
   <li>Opacity tables for He burning core:
   <ul>
-      <li>download the following archive: <a href="ycesam/opacity_He_burning_core.tar.gz">
+      <li>download the following archive: <a href="opacity_He_burning_core.tar.gz">
       opacity_He_burning_core.tar.gz</a></li>
       <li>gunzip and untar the file:
       <div class=command>tar xvfz opacity_He_burning_core.tar.gz</div></li>
@@ -107,7 +107,7 @@ each experiment.</p>
       <div class=command>./fmaker4.1</div>
       answer like this:
       <p>
-      <img src="ycesam/model_opa_TOPS.png">
+      <img src="model_opa_TOPS.png">
       </p>
       In this example, "<code>opa_HeB_SMC.dat</code>" is the opacity table which will be
       used as an input file for <i>Y</i>C.
@@ -133,7 +133,7 @@ each experiment.</p>
 ## Prepare the Nuclear Reaction Rates
 
 <ul>
-  <li>download the archive file: <a href="ycesam/nucreac_rate_tables.tar.gz">nucreac_rate_tables.tar.gz</a></li>
+  <li>download the archive file: <a href="nucreac_rate_tables.tar.gz">nucreac_rate_tables.tar.gz</a></li>
   <li>gunzip and untar this archive following the standard procedure<li>
   <li>go in the "<code>nucreac_rate_tables/</code>" directory and compile the programs: <code><b>./make</b></code>, you
       should get two executables:
@@ -157,13 +157,13 @@ each experiment.</p>
 <ul>
   <li>As <i>Y</i>C is based on a Newton-Raphson method, one needs a first guess. One
       will find a stellar structure for a 5 solar masses homogeneous model in this
-      ASCII files : <a href="ycesam/m050.dat">m050.dat</a></li>
+      ASCII files : <a href="m050.dat">m050.dat</a></li>
   <li>make a working directory, for instance: <code><b>myworkingdir</b></code></li>
-  <li>copy <a href="ycesam/m050.dat">m050.dat</a> and this input file:
-      <a href="ycesam/sample_intput_file_YC.don3">sample_intput_file_YC.don3</a> in 
+  <li>copy <a href="m050.dat">m050.dat</a> and this input file:
+      <a href="sample_intput_file_YC.don3">sample_intput_file_YC.don3</a> in 
       <code><b>myworkingdir</b></code>.<br>
       For a commented version of this input file see
-      <a href="ycesam/sample_intput_file_YC.html">here</a> (comments are in <font color=blue>blue</font>).    
+      <a href="sample_intput_file_YC.html">here</a> (comments are in <font color=blue>blue</font>).    
   </li>
   
   <li>Edit <code><b>sample_intput_file_YC.don3</b></code> and adapt the paths and names corresponding to the
@@ -190,12 +190,12 @@ each experiment.</p>
 	 <li>The program should run now ... and when the convergence is reached, you should
 	     get this message:
 	       <p>
-  	       <img src="ycesam/mod_conv.png">
+  	       <img src="mod_conv.png">
                </p>
 	     Answer "o" (yes) or "n" (no) if you want (or not) plots during <i>Y</i>C run. Execution ends
 	     with:
 	       <p>
-  	       <img src="ycesam/ycesam_end.png">
+  	       <img src="ycesam_end.png">
                </p>
 	 </li>
       </ul>
@@ -213,7 +213,7 @@ each experiment.</p>
 	 <li>If you have chosen the <i>plot option</i> (that requires compilation with PGPLOT
 	     ans X11 library), you should get plot as beautiful as this:
 	 <p>
-  	 <img src="ycesam/ycesam_plot_small.png">
+  	 <img src="ycesam_plot_small.png">
          </p>
 	 Chemical composition, pressure, temperature, convective zones extension ... are displayed.
 	 </li>
@@ -244,10 +244,10 @@ to the official version (unfortunately I lost the version with only modification
 to compilation problems). Sources can be downloaded here:
 <ul>
    <li>the code itself (with documentation (in french) and various programs):
-       <a href="ycesam/ycesam4.4.tar.gz">ycesam4.4.tar.gz</a></li>
-   <li>the "standard" main program: <a href="ycesam/exe_STD.f">exe_STD.f</a>, it has to be
-       compiled with the following include file: <a href="ycesam/modele.common">modele.common</a></li>
-   <li>finally, a sample input file is provided: <a href="ycesam/sample_input.don4">sample_input.don4</a></li>
+       <a href="ycesam4.4.tar.gz">ycesam4.4.tar.gz</a></li>
+   <li>the "standard" main program: <a href="exe_STD.f">exe_STD.f</a>, it has to be
+       compiled with the following include file: <a href="modele.common">modele.common</a></li>
+   <li>finally, a sample input file is provided: <a href="sample_input.don4">sample_input.don4</a></li>
 </ul>
 </p>
 

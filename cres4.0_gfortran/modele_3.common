@@ -1,0 +1,34 @@
+c	reconstituer la bibliotheque cesam_3.a si ce programme est modifie
+ 
+c	COMMON /modele_3/ pour la VERSION3
+ 
+c        10        20        30        40        50        60        70
+ 
+	real*8	mtot,mdot,alpha,dtmax,dtmin,dtlist,x0,y0,z0,agemax,dt0,
+     &    ro_test, psi0_c,precix,precit,d_grav,ovshts,ovshti,w_rot,vsal,
+     &    ctep,cter,ctel,ctem, para_rox1, para_rox2
+
+        integer ne,m_qs,m_ch,mpr
+
+	character*2  precision
+
+	character*31 nom_fich2	
+
+	character*50 modele,opa1,opa2,opa3,opa4,opa5,opa6,opa7,opa8,
+     &               nuc1,nuc2,nuc3
+c despau
+	character*1 rep_pause
+
+	logical	ledoux,rox,jpz,der_num,rot_solid,z_cte,kipp
+
+        logical repri,dty
+
+       common/modele_3/mtot,mdot,alpha,dtmax,dtmin,dtlist,x0,y0,z0,
+     &  agemax,dt0, psi0_c,precix,precit,d_grav,ovshts,ovshti,
+     &  para_rox1,para_rox2,w_rot,vsal,ctep,cter,ctel,ctem,ro_test,
+     &  ne,m_qs,m_ch,mpr,ledoux,rox,jpz,der_num,rot_solid,z_cte,kipp,
+     &  repri,dty,modele,opa1,opa2,opa3,opa4,opa5,opa6,opa7,opa8,
+     &  nom_fich2,precision,nuc1,nuc2,nuc3
+
+       common/les_pauses/rep_pause
+ 

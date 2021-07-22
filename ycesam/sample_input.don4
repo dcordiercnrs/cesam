@@ -1,0 +1,71 @@
+ $NL_ESPACE
+ MTOT    = 7.0d0
+ MDOT    = 0.0
+ DER_NUM = F
+ TAU_MAX = 10.0
+ LIM_RO  = T
+ $END
+ $NL_NUM
+ PRECISION ='dc'
+ DTMAX     = 1.d0
+ DTMIN     = 1.d-6
+ PSI0      = 0.1d0
+ PRECIX    = 5.d-3
+ PRECIT    = 0.2d0
+ D_GRAV    = 0.5d0
+ EN_MASSE  = T
+ $END
+ $NL_TEMPS
+ AGEMAX   = 1.d12
+ DTLIST   = 100000000.0
+ X_STOP   = +0.1d0
+ Y_STOP   = -1.0
+ LOG_TEFF = +10.0
+ T_STOP   = 1.d+12
+ ARRET    ='else'
+ $END
+ $NL_CHIM
+ X0        = 0.733d0
+ Y0        = 0.259d0
+ ZSX0      = 0.
+ Z_CTE     = F
+ D_TURB    = 0.
+ DIFFUSION = F
+ F_RAD     = F
+ MITLER    = F
+ $END
+ $NL_ROT
+ W_ROT     = 0.0
+ ROT_SOLID = T
+ $END
+ $NL_CONV
+ ALPHA  = 0.7
+ CPTURB = 0.0
+ OVSHTS = 0.20
+ OVSHTI = 0.0
+ JPZ    = F
+ LEDOUX = F
+ $END
+ $NL_ETAT
+ F_EOS  = '../../../eos_OPAL/EOSdata_z0.004.dat', 
+ '2                                                 ', 
+ '3                                                 ', 
+ '4                                                 ', 
+ '5                                                 ', 
+ '6                                                 ', 
+ '7                                                 ', 
+ '8                                                 '
+ $END
+ $NL_OPA
+ F_OPA  ='../../../../opa/OPAL96_g77.dat', 
+ '../../../../opa/TOPS99_MW_g77.dat', 
+ '../../../../opa/TOPS99_LMC_g77.dat', 
+ '../../../../opa/TOPS99_SMC_g77.dat', 
+ '5                                                 ', 
+ '6                                                 ', 
+ '7                                                 ', 
+ '8                                                 '
+ $END
+ $NL_NUC
+ F_NUC  ='../../../../nucleaire/ppcno+3a18.DC.data'
+ $END

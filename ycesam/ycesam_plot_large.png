@@ -1,0 +1,72 @@
+ $NL_ESPACE
+ MTOT       =   5.0d0
+ MDOT       =   0.0d0
+ DER_NUM    =   F
+ TAU_MAX    =   10.0
+ $END
+ $NL_NUM
+ PRECISION  =   'c1'
+ DTMAX      =   2.d0
+ DTMIN      =   1.d-6
+ PSI0_C     =   0.1
+ PRECIX     =   5.d-3
+ PRECIT     =   0.20
+ D_GRAV     =   0.5d0
+ REPRI      =   T
+ TDSTEST    =   T
+ DTY        =   F
+ $END
+ $NL_TEMPS
+ AGEMAX     =   0.d9
+ DTLIST     =   100000000.0
+ X_STOP     =   +0.5d0
+ Y_STOP     =   -1.d0
+ LOG_TEFF   =   -3.8d0
+ LCROISSANT =   T
+ LOG_LSLSOL =   120.d0
+ T_STOP     =   260000000.0
+ arret      =  'else'
+ $END
+ $NL_ENREG_MOD
+ ENRE_BIN   =   F
+ KEY_WORD   =   'test'
+ DTREP      =   0.1d0
+ $END
+ $NL_CHIM
+ X0          =  0.7495d0
+ Y0          =  0.2480d0
+ Z_CTE       =   F
+ DIFFUSION   =   F
+ $END
+ $NL_ROT
+ W_ROT       =  .0
+ ROT_SOLID   = 	 F
+ $END
+ $NL_CONV
+ ALPHA       =   1.6
+ OVSHTS      =   0.0d0
+ OVSHTI      =   0.0d0
+ PARA_ROX1   =   0.d0
+ PARA_ROX2   =   0.d0
+ JPZ	     =   F
+ ROX         =   F
+ LEDOUX      =   F
+ $END
+ $NL_ETAT
+ FICH =  ' ' '2' '3' '4' '5' '6' '7' '8'
+ $END
+ $NL_NUC
+ NUC1  = 'MY_PATH_TO_NUCLEAR_REACTIONS_RATES_FILE'
+ NUC2 =  '             '
+ NUC3 =  '             '
+ $END
+ $NL_OPA
+ OPA1  = 'MY_PATH_TO_OPAL96_OPACITY_FILE'
+ OPA2  = 'MY_PATH_TO_HeBurning_MW_file'
+ OPA3  = 'MY_PATH_TO_HeBurning_LMC_file'
+ OPA4  = 'MY_PATH_TO_HeBurning_SMC_file'
+ OPA5  =  '   '
+ OPA6  =  '   '
+ OPA7  =  '   '
+ OPA8  =  '   '
+ $END

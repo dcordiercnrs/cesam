@@ -1,0 +1,69 @@
+c	reconstituer la bibliotheque cesam.a si ce programme est modifie
+
+c	COMMON /modele/ CESAM4
+
+c	mtot : masse initiale, lu dans lit_nl
+c	mdot : taux de perte de masse, lu en Msol/an dans lit_nl,
+c			mis en cgs dans resout
+c	dtmax : pas temporel maximal, initialise dans resout
+c	dtmin : pas temporel minimal, initialise dans resout
+c	dtlist : intervalle de temps entre deux listes completes du modele,
+c			lu dans lit_nl	
+c	agemax : temps d'evolution, lu dans lit_nl
+c	dt0 : pas temporel initial, initialise dans resout
+c	precix : precision pour les variables d'espace, initialise dans resout
+c	d_grav : variation maximale du TdS, initialise dans resout
+c	w_rot : vitesse angulaire initiale, lu dans lit_nl
+c	ctep,ctem,cter : constantes pour la fonction de repartition,
+c			initialise dans resout 
+c	log_teff > 0 : arret des que log Teff > log_teff, lu dans lit_nl
+c	x_stop : arret des que Xcentre < x_stop, lu dans lit_nl
+c	t_stop : arret des que Tcentre > t_stop, lu dans lit_nl
+c	ro_test : la variation maximale du TdS n'est controlee que si
+c		ro > ro_test, initialise dans resout
+c	c_iben : constante de contraction PMS, lu sur clavier demande par cesam
+c	ne : nombre d'equations pour l'equilibre quasi-statique,
+c			initialise dans resout
+c	m_qs : ordre des splines pour l'equilibre quasi-statique,
+c			initialise dans resout 
+c	m_ch : ordre des splines pour la composition chimique,
+c			initialise dans resout 
+c	mpr : m_qs + 1 , initialise dans resout
+c	der_num=.true. : jacobien numerique pour l'equilibre quasi-statique,
+c			lu dans lit_nl
+c	rot_solid=.true. : rotation solide, lu dans lit_nl
+c	z_cte=.true. : Z est pris constant pour la determination de l'opacite,
+c			lu dans lit_nl
+c	kipp=.true. : approximation de Kippenhahn pour le calcul
+c		de l'energie graviphique, lu dans lit_nl
+c	en_masse=.true. : calcul en lagrangien, initialise dans resout
+c	lim_ro=.true. : limite externe sur la densite / la gravite,
+c		lu dans lit_nl		
+c	modele : nom du modele, initialise dans resout
+c	f_opa(1).......f_opa(8) : noms de fichiers d'opacite, lu dans lit_nl
+c	f_eos(1).......f_eos(8) : noms de fichiers d'EOS, lu dans lit_nl
+c	sub_phys(1), sub_phys(2) : chaines de caracteres des noms des routines
+c		appelles par cesam, initialise dans le programme d'appel
+c	nom_fich2 : nom generique des fichiers du modele, initialise dans resout
+c	arret : pour arreter l'evolution sur ZAMS, POST, etc.., lu dans lit_nl
+c	precision : type de modele, lu dans lit_nl  
+
+	real*8 mtot,mdot,dtmax,dtmin,dtlist,agemax,dt0,ro_test,c_iben,
+     &  psi0,precix,d_grav,w_rot,ctep,ctem,cter,log_teff,x_stop,y_stop,
+     &  t_stop
+
+	integer ne,m_qs,m_ch,mpr
+	character*2  precision	
+	character*4 arret
+	character*31 nom_fich2	
+	character*50 model,f_opa(8),f_eos(8)
+	character*70 sub_phys(2)
+	logical	der_num,rot_solid,z_cte,kipp,en_masse,lim_ro
+
+	common/modele/mtot,mdot,dtmax,dtmin,dtlist,agemax,dt0,
+     &   ro_test,c_iben,psi0,precix,d_grav,w_rot,ctep,ctem,cter,
+     &   log_teff,
+     &   x_stop,y_stop,t_stop,ne,m_qs,m_ch,mpr,der_num,rot_solid,z_cte,
+     &   kipp,en_masse,lim_ro,sub_phys,model,f_opa,f_eos,nom_fich2,
+     &   arret,precision
+

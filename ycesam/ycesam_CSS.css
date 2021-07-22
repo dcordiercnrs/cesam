@@ -1,0 +1,17 @@
+/* ------------------------------------------------------- */
+/* CSS file for Yellow CESAM web page                      */
+/* ------------------------------------------------------- */
+/* http://astro.ensc-rennes.fr                             */
+/*                                                         */
+/* D. Cordier, mars 2005.                                  */
+/*                                                         */         
+.nl {
+	 color: red;
+         width: 80%;  
+	 background-color : yellow;
+	 text-align: left;
+}
+
+.com {
+	color: blue;
+}

@@ -1,0 +1,87 @@
+$NL_ESPACE
+MTOT 	= 	5.0d0 	<font color="blue">:: Mass in solar masses</font></br>
+MDOT 	= 	0.0d0 	<font color="blue">:: Mass loss rate (constant mass loss)</font></br>
+DER_NUM 	= 	F 	<font color="blue">:: Numerical or analytical derivatives</font></br>
+TAU_MAX 	= 	10.0 	<font color="blue">:: Optical depth of "photosphere"</font></br>
+
+$END
+$NL_NUM
+PRECISION 	= 	'c1' 	<font color="blue">:: precision option (see resout_cephee1.f subroutine)</font></br>
+DTMAX 	= 	2.d0 	<font color="blue">:: max value for time steps</font></br>
+DTMIN 	= 	1.d-6 	<font color="blue">:: min value for time steps</font></br>
+PSI0_C 	= 	0.1 	<font color="blue">:: gives the number of shells in the model (see P.
+Morel's paper)</font></br>
+PRECIX 	= 	5.d-3 	<font color="blue">:: precision for space</font></br>
+PRECIT 	= 	0.20 	<font color="blue">:: precision for time</font></br>
+D_GRAV 	= 	0.5d0 	<font color="blue">:: max relative variation of gravitational energy</font></br>
+REPRI 	= 	T 	<font color="blue">:: for tests</font></br>
+TDSTEST 	= 	T 	<font color="blue">:: for tests</font></br>
+DTY 	= 	F 	<font color="blue">:: for tests</font></br>
+
+$END
+$NL_TEMPS
+AGEMAX 	= 	0.d9 	<font color="blue">:: Maximum age in mega-years</font></br>
+DTLIST 	= 	100000000.0 	<font color="blue">:: time between two "*.lis" output files</font></br>
+X_STOP 	= 	+0.5d0 	<font color="blue">:: at this value of Xc (central value of X) the
+computation is stopped</font></br>
+Y_STOP 	= 	-1.d0 	<font color="blue">:: at this value of Yc (central value of Y) the
+computation is stopped</font></br>
+LOG_TEFF 	= 	-3.8d0 	<font color="blue">:: at this value of Log Teff the calculation is stopped</font></br>
+LCROISSANT 	= 	T 	<font color="blue">:: for tests</font></br>
+LOG_LSLSOL 	= 	120.d0 	<font color="blue">:: for test</font></br>
+T_STOP 	= 	260000000.0 	<font color="blue">:: at this central temperature the evolution is
+stopped</font></br>
+arret 	= 	'else' 	<font color="blue">:: for tests</font></br>
+
+$END
+$NL_ENREG_MOD
+ENRE_BIN 	= 	F 	<font color="blue">:: for tests</font></br>
+KEY_WORD 	= 	'test' 	<font color="blue">:: for tests</font></br>
+DTREP 	= 	0.1d0 	<font color="blue">:: for tests</font></br>
+
+$END
+$NL_CHIM
+X0 	= 	0.7495d0 	<font color="blue">:: Initial mass fraction in hydrogen</font></br>
+Y0 	= 	0.2480d0 	<font color="blue">:: Initial mass fraction in helium</font></br>
+Z_CTE 	= 	F 	<font color="blue">:: metallicity is assumed to be constant or not</font></br>
+DIFFUSION 	= 	F 	<font color="blue">:: diffusion is included or not</font></br>
+
+$END
+$NL_ROT
+W_ROT 	= 	.0 	<font color="blue">:: initial value of momentum</font></br>
+ROT_SOLID 	= 	F 	<font color="blue">:: solid rotation or not</font></br>
+
+$END
+$NL_CONV
+ALPHA 	= 	1.6 	<font color="blue">:: Mixing lenght (ML Theory)</font></br>
+OVSHTS 	= 	0.0d0 	<font color="blue">:: Overshooting amount *above* a convective zone</font></br>
+OVSHTI 	= 	0.0d0 	<font color="blue">:: Overshooting amount *below* a convective zone</font></br>
+PARA_ROX1 	= 	0.d0 	<font color="blue">:: for tests with Roxburgh's criterion</font></br>
+PARA_ROX2 	= 	0.d0 	<font color="blue">:: for tests with Roxburgh's criterion</font></br>
+JPZ 	= 	F 	<font color="blue">:: J.-P. Zahn's criterion</font></br>
+ROX 	= 	F 	<font color="blue">:: for tests with Roxburgh's criterion</font></br>
+LEDOUX 	= 	F 	<font color="blue">:: Ledoux's criterion instead of Schwarzschild one</font></br>
+
+$END
+$NL_ETAT
+FICH 	= 	' ' '2' '3' '4' '5' '6' '7' '8' 	<font color="blue">:: EOS files</font></br>
+
+$END
+$NL_NUC
+NUC1 	= 	'MY_PATH_TO_NUCLEAR_REACTIONS_RATES_FILE' 		<font color="blue">:: Nuclear reaction
+rate file</font></br>
+NUC2 	= 	' ' 	::</font></br>
+NUC3 	= 	' ' 	::</font></br>
+
+$END
+$NL_OPA
+OPA1 	= 	'MY_PATH_TO_OPAL96_OPACITY_FILE' 	<font color="blue">:: OPAL 96 tables opacity file</font></br>
+OPA2 	= 	'MY_PATH_TO_HeBurning_MW_file' 	<font color="blue">:: opacity file for He burning and Milky Way metallicity</font></br>
+OPA3 	= 	'MY_PATH_TO_HeBurning_LMC_file' 	<font color="blue">:: opacity file for He burning and LMC metallicity</font></br>
+OPA4 	= 	'MY_PATH_TO_HeBurning_SMC_file' 	<font color="blue">:: opacity file for He burning and SMC metallicity</font></br>
+OPA5 	= 	' ' 	<font color="blue">::</font></br>
+OPA6 	= 	' ' 	<font color="blue">::</font></br>
+OPA7 	= 	' ' 	<font color="blue">::</font></br>
+OPA8 	= 	' ' 	<font color="blue">::</font></br>
+
+$END
